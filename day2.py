@@ -1,12 +1,10 @@
-import os
-
-#input data for the task
+# input data for the task
 
 data_file_input = open('.\\inputs\\input2.txt')
 data_input = data_file_input.readlines()
-#print(data_input)
+# print(data_input)
 
-#part 1
+# part 1
 
 rounds = []
 score = 0
@@ -42,25 +40,25 @@ score = 0
 
 for i in range(len(data_input)):
     if data_input[i][0] == 'A':
-        if data_input[i][2] == 'X':     #scissors
+        if data_input[i][2] == 'X':     # scissors
             score += 3
-        elif data_input[i][2] == 'Y':   #rock
+        elif data_input[i][2] == 'Y':   # rock
             score += 3 + 1
-        elif data_input[i][2] == 'Z':   #paper
+        elif data_input[i][2] == 'Z':   # paper
             score += 6 + 2
     elif data_input[i][0] == 'B':
-        if data_input[i][2] == 'X':     #rock
+        if data_input[i][2] == 'X':     # rock
             score += 1
-        elif data_input[i][2] == 'Y':   #paper
+        elif data_input[i][2] == 'Y':   # paper
             score += 3 + 2
-        elif data_input[i][2] == 'Z':   #scissors
+        elif data_input[i][2] == 'Z':   # scissors
             score += 6 + 3
     elif data_input[i][0] == 'C':
-        if data_input[i][2] == 'X':     #paper
+        if data_input[i][2] == 'X':     # paper
             score += 2
-        elif data_input[i][2] == 'Y':   #scissors
+        elif data_input[i][2] == 'Y':   # scissors
             score += 3 + 3
-        elif data_input[i][2] == 'Z':   #rock
+        elif data_input[i][2] == 'Z':   # rock
             score += 6 + 1
 
 print(score)
